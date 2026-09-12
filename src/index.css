@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Stadium Night theme */
+    --background: 226 47% 6%;
+    --foreground: 45 30% 96%;
+    --card: 224 40% 10%;
+    --card-foreground: 45 30% 96%;
+    --popover: 224 40% 9%;
+    --popover-foreground: 45 30% 96%;
+    --primary: 38 95% 55%;
+    --primary-foreground: 226 47% 8%;
+    --secondary: 223 35% 16%;
+    --secondary-foreground: 45 30% 96%;
+    --muted: 223 35% 14%;
+    --muted-foreground: 222 15% 62%;
+    --accent: 4 76% 52%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 223 30% 20%;
+    --input: 223 30% 20%;
+    --ring: 38 95% 55%;
+    --radius: 0.75rem;
+    --sidebar-background: 224 40% 9%;
+    --sidebar-foreground: 45 30% 96%;
+    --sidebar-primary: 38 95% 55%;
+    --sidebar-primary-foreground: 226 47% 8%;
+    --sidebar-accent: 223 35% 16%;
+    --sidebar-accent-foreground: 45 30% 96%;
+    --sidebar-border: 223 30% 20%;
+    --sidebar-ring: 38 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Archivo Black', 'Inter', system-ui, sans-serif;
+  }
+  .text-glow {
+    text-shadow: 0 0 24px hsl(38 95% 55% / 0.45), 0 0 64px hsl(38 95% 55% / 0.2);
+  }
+  .card-glow {
+    box-shadow: 0 0 0 1px hsl(38 95% 55% / 0.25), 0 8px 40px -8px hsl(38 95% 55% / 0.25);
+  }
+  .stadium-grid {
+    background-image:
+      linear-gradient(hsl(223 30% 20% / 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(223 30% 20% / 0.35) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .perspective-800 {
+    perspective: 800px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
